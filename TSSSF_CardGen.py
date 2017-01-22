@@ -15,7 +15,7 @@ TOTAL_CARDS = PAGE_WIDTH*PAGE_HEIGHT
 workspace_path = os.path.dirname("workspace")
 card_set = os.path.dirname("deck.cards")
 CardSet = os.path.dirname("deck.cards")
-CardPath = DIRECTORY+"/Card Art/"
+CardPath = DIRECTORY+"/Card-Art/"
 ResourcePath = DIRECTORY+"/resources/"
 BleedsPath = DIRECTORY+"/bleed-images/"
 CropPath = DIRECTORY+"/cropped-images/"
@@ -194,7 +194,7 @@ backs = {"START": PIL_Helper.LoadImage(ResourcePath + "Back-Start.png"),
          "Ship": PIL_Helper.LoadImage(ResourcePath + "Back-Ships.png"),
          "Card": PIL_Helper.LoadImage(ResourcePath + "Back-Main.png"),
          "Shipwrecker": PIL_Helper.LoadImage(ResourcePath + "Back-Main.png"),
-         "BLANK": PIL_Helper.LoadImage(ResourcePath + "Blank - Intentionally Left Blank.png"),
+         #"BLANK": PIL_Helper.LoadImage(ResourcePath + "Blank - Intentionally Left Blank.png"),
          "Rules1": PIL_Helper.LoadImage(CardPath + "Rules2.png"),
          "Rules3": PIL_Helper.LoadImage(CardPath + "Rules4.png"),
          "Rules5": PIL_Helper.LoadImage(CardPath + "Rules6.png"),

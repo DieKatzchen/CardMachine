@@ -106,3 +106,6 @@ $RECYCLE.BIN/
 BaBOC/
 TSSSF/
 WSotT/
+convert.exe
+*.project
+*.pydevproject
