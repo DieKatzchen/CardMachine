@@ -1,10 +1,9 @@
 import os, glob, shutil, traceback, random
 import PIL_Helper
 
-TYPE, PICTURE, SYMBOLS, TITLE, KEYWORDS, BODY, FLAVOR, EXPANSION, CLIENT = range(9)
+TYPE, PICTURE, SYMBOLS, TITLE, KEYWORDS, BODY, FLAVOR, EXPANSION, CLIENT,ARTIST = range(10)
 DIRECTORY = "TSSSF"
-ARTIST = "Pixel Prism"
-
+#ARTIST = "Pixel Prism"
 
 LegacySymbolMode = False
 PAGE_WIDTH = 3
@@ -450,11 +449,15 @@ def AddExpansion(image, expansion):
 def CopyrightText(tags, image, color):
     card_set = CardSet.replace('_',' ')
     #print tags[CLIENT], repr(tags)
-    if len(tags)-1 >= CLIENT:
+    if len(tags) > ARTIST:
+        artist = tags[ARTIST]
+    else:
+        artist = "Pixel Prism"
+    if len(tags)-1 > CLIENT:
         card_set += " " + str(tags[CLIENT])
     text = "{}; TSSSF by Horrible People Games. Art by {}.".format(
         card_set,
-        ARTIST
+        artist
         )
     PIL_Helper.AddText(
         image = image,
