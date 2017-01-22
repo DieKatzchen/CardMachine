@@ -43,7 +43,10 @@ def main(folder="TSSSF", filepath="Core 1.0.3/deck.cards"):
     module.CropPath = cropped_path
     vassal_path = CleanDirectory(path=folder+"/"+card_set, mkdir="vassal-images",rmstring="*.*")
     module.VassalPath = vassal_path
-
+    TGC_path = CleanDirectory(path=folder+"/"+card_set, mkdir="TGC-images",rmstring="*.*")
+    module.TGCPath = TGC_path
+	
+	
     # Create output directory
     output_folder = CleanDirectory(path=folder, mkdir=card_set,rmstring="*.pdf")
 
@@ -115,8 +118,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    main(args.basedir, args.set_file)
-    #main('TSSSF', 'Multiplicity 0.0.1a/cards.pon')
+    #main(args.basedir, args.set_file)
+    main('TSSSF', 'Multiplicity 0.0.1a/cards.pon')
     #main('TSSSF', '1.1.0 Patch/cards.pon')
     #main('TSSSF', '2014 Con Exclusives/cards.pon')
     #main('TSSSF', 'BABScon 2015/cards.pon')
