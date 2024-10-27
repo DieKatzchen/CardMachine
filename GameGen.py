@@ -110,9 +110,9 @@ def main(folder="TSSSF", filepath="Core Deck/cards.json"):
     module.CompileVassalModule()
 
     print("\nCreating PDF...")
-    os.system(r'magick convert "{}\page_*.png" "{}\{}.pdf"'.format(workspace_path, output_folder, os.path.basename(card_set)))
+    os.system(r'magick convert "{}/page_*.png" "{}/{}.pdf"'.format(workspace_path, output_folder, os.path.basename(card_set)))
     print("\nCreating PDF of backs...")
-    os.system(r'magick convert "{}\backs_*.png" "{}\backs_{}.pdf"'.format(workspace_path, output_folder, os.path.basename(card_set)))
+    os.system(r'magick convert "{}/backs_*.png" "{}/backs_{}.pdf"'.format(workspace_path, output_folder, os.path.basename(card_set)))
     print("Done!")
 
 
