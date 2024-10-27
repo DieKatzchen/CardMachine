@@ -10,6 +10,7 @@
 [submodule "TSSSF/Mini Expansions"]
 	path = TSSSF/Mini Expansions
 	url = https://github.com/DieKatzchen/Mini-Expansions.git
+	branch = Multiplicity
 [submodule "TSSSF/Expansions"]
 	path = TSSSF/Expansions
 	url = https://github.com/secretshipfic/Expansions.git
